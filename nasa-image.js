@@ -36,7 +36,7 @@ export class NasaImage extends LitElement {
     }
 
     .image img:hover {
-    background-color: #ADD8E6;
+    border: 4px solid #2E865F;
     }
 
     `];
