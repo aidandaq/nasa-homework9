@@ -35,15 +35,21 @@ export class NasaImage extends LitElement {
     height: 200px;
     }
 
+    .image img:hover {
+    background-color: var(--ddd-theme-default-success);
+    }
+
     `];
   }
 
   render() {
     return html`
-    <div class="image">
-        <img src="${this.source}" />
+      <div class="image">
+        <a href="${this.source}" target="_blank">
+          <img src="${this.source}"/>
+        </a>
         <div>${this.title}</div>
-    </div>
+      </div>
     `;
   }
   static get tag() {
