@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import "./nasa-image.js";
+import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 export class NasaSearch extends LitElement {
   static get properties() {
     return {
@@ -14,18 +15,29 @@ export class NasaSearch extends LitElement {
     return css`
       :host {
         display: block;
+        width: 100%;
+        color: var(--ddd-theme-primary);
+        background-color: var(--ddd-theme-primary);
       }
+    
       :host([loading]) .results {
         opacity: 0.1;
         visibility: hidden;
         height: 1px;
       }
+
       .results {
         visibility: visible;
         height: 100%;
         opacity: 1;
         transition-delay: .5s;
         transition: .5s all ease-in-out;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 8px;
+        box-sizing: border-box;
+        padding: 16px;
       }
 
       details {
