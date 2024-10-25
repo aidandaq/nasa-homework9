@@ -24,7 +24,7 @@ export class NasaImage extends LitElement {
     return [css`
 
     .card{
-      background-color: var(--ddd-theme-default-creekTeal);
+      background-color: var(--ddd-theme-default-alertNonEmergency);
       border-radius: 8px;
       padding: 16px;
       margin: 20px;
